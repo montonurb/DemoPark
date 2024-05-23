@@ -1,5 +1,6 @@
 package com.montonurb.demoparkapi.entity;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
@@ -10,7 +11,7 @@ import lombok.*;
 @Getter @Setter @NoArgsConstructor
 @Entity
 @Table(name = "usuarios")
-public class Usuario {
+public class Usuario implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
